@@ -13,7 +13,6 @@ SRC	=	main.c \
 		ss.c \
 		display.c \
 		big_finder.c
-#		fusion.c
 
 OBJ	=	$(SRC:.c=.o)
 
