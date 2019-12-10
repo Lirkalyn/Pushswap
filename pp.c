@@ -11,7 +11,7 @@
 int pa(char **l_b, char **l_a)
 {
     int i;
-    int len;
+    int len = list_lenght(l_a);
 
     if (l_b[0][0] == 'a')
         return 1;
@@ -20,7 +20,6 @@ int pa(char **l_b, char **l_a)
         l_b[0] = "a";
     }
     else {
-        len = list_lenght(l_a);
         for (i = len; i > 0; i--)
             if (l_a[(i - 1)] != "a")
                 l_a[i] = l_a[(i - 1)];
@@ -36,7 +35,7 @@ int pa(char **l_b, char **l_a)
 int pb(char **l_a, char **l_b)
 {
     int i;
-    int len;
+    int len = list_lenght(l_b);
 
     if (l_a[0][0] == 'a')
         return 1;
@@ -45,7 +44,6 @@ int pb(char **l_a, char **l_b)
         l_a[0] = "a";
     }
     else {
-        len = list_lenght(l_b);
         for (i = len; i > 0; i--)
             if (l_b[(i - 1)] != "a")
                 l_b[i] = l_b[(i - 1)];
