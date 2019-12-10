@@ -89,11 +89,6 @@ int main(int argc, char **argv)
     l_b[(argc - 1)] = 0;
     put_in_place(argc, argv, l_a, l_b);
     sort_start(argc, l_a, l_b);
-    for (i = 0; i < (argc - 1); i++)
-        printf("%s\n", l_a[i]);
-    printf("\n");
-    for (i = 0; i < (argc - 1); i++)
-        printf("%s\n", l_b[i]);
     for (i = 0; l_b[0][0] == '-'; i++) {
         pa(l_b, l_a);
         rr(l_a, l_b);
@@ -105,10 +100,4 @@ int main(int argc, char **argv)
         ra(l_a, 0);
         rrb(l_b, 0);
     }
-    printf("\n");
-    for (i = 0; i < (argc - 1); i++)
-        printf("%s\n", l_a[i]);
-    printf("\n");
-    for (i = 0; i < (argc - 1); i++)
-        printf("%s\n", l_b[i]);
 }
