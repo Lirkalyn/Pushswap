@@ -23,6 +23,8 @@ int rra(char **l_a, int opt);
 int rrb(char **l_b, int opt);
 int rrr(char **l_a, char **l_b);
 int big_neg_finder(int argc, char **l_a, char **l_b, int pos);
+int big_posi_finder(int argc, char **l_a, char **l_b, int pos);
+void mover(int argc, char **l_a, char **l_b, int pos);
 //int found_neg(int argc, char **l_a);
 //int first_neg_pos(int argc, char **l_a, _Bool neg_find, int pos);
 

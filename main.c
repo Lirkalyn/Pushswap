@@ -13,11 +13,32 @@
 void sort_start(int argc, char **l_a, char **l_b)
 {
     int i;
-    int pos;
+    //int pos;
+    int neg_find = 0;
+    _Bool ok = 0;
 
-    for (i = 0; i < (argc - 1); i++)
-        if (l_a[i][0] == '-')
-            pos = big_neg_finder(argc, l_a, l_b, i);
+    while (neg_find == 0) {
+        ok = 0;
+        for (i = 0; i < (argc - 1); i++)
+            if (l_a[i][0] == '-') {
+                ok = 1;
+                mover(argc, l_a, l_b, big_neg_finder(argc, l_a, l_b, i));
+                //pos = big_neg_finder(argc, l_a, l_b, i);
+                //mover(argc, l_a, l_b, pos);
+            }
+        neg_find = (ok == 1) ? 0 : 1;
+    }
+    while (neg_find == 1) {
+        ok = 0;
+        for (i = 0; i < (argc - 1); i++)
+            if (l_a[i][0] == '0') {
+                ok = 1;
+                mover(argc, l_a, l_b, big_posi_finder(argc, l_a, l_b, i));
+                //pos = big_posi_finder(argc, l_a, l_b, i);
+                //mover(argc, l_a, l_b, pos);
+            }
+        neg_find = (ok == 1) ? 1 : 2;
+    }
 }
 
 int longer(int argc, char **argv)

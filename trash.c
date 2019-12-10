@@ -11,8 +11,8 @@ int fusion_start(int argc, char **l_a, char **l_b, int pos)
     int neg_pos = -5;
     _Bool neg_find;
 
-    neg_find = found_neg(argc, l_a);
-    neg_pos = first_neg_pos(argc, l_a, neg_find, pos);
+    //neg_find = found_neg(argc, l_a);
+    //neg_pos = first_neg_pos(argc, l_a, neg_find, pos);
     if ((neg_pos >= ((argc - 1) / 2)) && (neg_find == 1))
         for (i = neg_pos; i < (argc - 1); i++)
             rra(l_a, 0);
