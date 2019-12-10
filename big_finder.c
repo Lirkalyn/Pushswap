@@ -49,7 +49,7 @@ int big_posi_finder(int argc, char **l_a, char **l_b, int pos)
     return posi_pos;
 }
 
-void mover(int argc, char **l_a, char **l_b, int pos)
+void moover(int argc, char **l_a, char **l_b, int pos)
 {
     int i;
 

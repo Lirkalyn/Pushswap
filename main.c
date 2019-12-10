@@ -13,7 +13,6 @@
 void sort_start(int argc, char **l_a, char **l_b)
 {
     int i;
-    //int pos;
     int neg_find = 0;
     _Bool ok = 0;
 
@@ -22,9 +21,7 @@ void sort_start(int argc, char **l_a, char **l_b)
         for (i = 0; i < (argc - 1); i++)
             if (l_a[i][0] == '-') {
                 ok = 1;
-                mover(argc, l_a, l_b, big_neg_finder(argc, l_a, l_b, i));
-                //pos = big_neg_finder(argc, l_a, l_b, i);
-                //mover(argc, l_a, l_b, pos);
+                moover(argc, l_a, l_b, big_neg_finder(argc, l_a, l_b, i));
             }
         neg_find = (ok == 1) ? 0 : 1;
     }
@@ -33,9 +30,7 @@ void sort_start(int argc, char **l_a, char **l_b)
         for (i = 0; i < (argc - 1); i++)
             if (l_a[i][0] == '0') {
                 ok = 1;
-                mover(argc, l_a, l_b, big_posi_finder(argc, l_a, l_b, i));
-                //pos = big_posi_finder(argc, l_a, l_b, i);
-                //mover(argc, l_a, l_b, pos);
+                moover(argc, l_a, l_b, big_posi_finder(argc, l_a, l_b, i));
             }
         neg_find = (ok == 1) ? 1 : 2;
     }
@@ -94,25 +89,26 @@ int main(int argc, char **argv)
     l_b[(argc - 1)] = 0;
     put_in_place(argc, argv, l_a, l_b);
     sort_start(argc, l_a, l_b);
-    //fusion_start(argc, l_a, l_b, 0);
-    //printf("%d\n", longer(argc, argv));
-    /*for (i = 1; i < argc; i++) {
-        l_a[(i - 1)] = argv[i];
-        l_b[(i - 1)] = "a";
-    }*/
-    //printf("\n");
     for (i = 0; i < (argc - 1); i++)
         printf("%s\n", l_a[i]);
     printf("\n");
-    //l_b[0] = "45";
     for (i = 0; i < (argc - 1); i++)
         printf("%s\n", l_b[i]);
-    //printf("\n");
-    /*rrr(l_a, l_b);
+    for (i = 0; l_b[0][0] == '-'; i++) {
+        pa(l_b, l_a);
+        rr(l_a, l_b);
+    }
+    while (i-- >= 0)
+        rrb(l_b, 0);
+    while (l_b[0][0] == '0') {
+        pa(l_b, l_a);
+        ra(l_a, 0);
+        rrb(l_b, 0);
+    }
     printf("\n");
     for (i = 0; i < (argc - 1); i++)
         printf("%s\n", l_a[i]);
     printf("\n");
     for (i = 0; i < (argc - 1); i++)
-        printf("%s\n", l_b[i]);*/
+        printf("%s\n", l_b[i]);
 }
