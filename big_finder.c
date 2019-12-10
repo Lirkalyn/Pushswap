@@ -7,6 +7,26 @@
 
 #include "my.h"
 
+int checker(char *origin, char *replace)
+{
+    int ori = 0;
+    int rep = 0;
+    int lenght;
+    int i;
+
+    for (lenght = 0; origin[lenght] != '\0'; lenght++);
+    for (i = 1; i < lenght; i++) {
+        ori *= 10;
+        rep *= 10;
+        ori += (origin[i] - '0');
+        rep += (replace[i] - '0');
+    }
+    if (ori < rep)
+        return 1;
+    else
+        return 0;
+}
+
 int big_neg_finder(int argc, char **l_a, char **l_b, int pos)
 {
     int i;
@@ -16,14 +36,11 @@ int big_neg_finder(int argc, char **l_a, char **l_b, int pos)
 
     for (i = 1; l_a[pos][i] != '\0'; i++) {
         for (j = 0; j < (argc - 1); j++)
-            if ((tmp < (l_a[j][i] - '0')) && (l_a[j][0] == '-')) {
-                tmp = (l_a[j][i] - '0');
-                neg_pos = j;
-            }
-        if (tmp != 0)
-            return neg_pos;
-        else
-            tmp = (l_a[pos][(i + 1)] - '0');
+            if (l_a[j][0] == '-')
+                if (checker(l_a[neg_pos], l_a[j])) {
+                    tmp = (l_a[j][i] - '0');
+                    neg_pos = j;
+                }
     }
     return neg_pos;
 }
@@ -37,14 +54,11 @@ int big_posi_finder(int argc, char **l_a, char **l_b, int pos)
 
     for (i = 1; l_a[pos][i] != '\0'; i++) {
         for (j = 0; j < (argc - 1); j++)
-            if (tmp < (l_a[j][i] - '0') && (l_a[j][0] != 'a')) {
-                tmp = (l_a[j][i] - '0');
-                posi_pos = j;
-            }
-        if (tmp != 0)
-            return posi_pos;
-        else
-            tmp = (l_a[pos][(i + 1)] - '0');
+            if (l_a[j][0] != 'a')
+                if (checker(l_a[posi_pos], l_a[j])) {
+                    tmp = (l_a[j][i] - '0');
+                    posi_pos = j;
+                }
     }
     return posi_pos;
 }
