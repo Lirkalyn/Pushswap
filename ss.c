@@ -8,9 +8,7 @@
 #include <stdlib.h>
 #include "my.h"
 
-//#include <stdio.h>
-
-int sa(char *l_a[], int opt) //test ok
+int sa(char *l_a[], int opt)
 {
     char *tmp;
 
@@ -26,7 +24,7 @@ int sa(char *l_a[], int opt) //test ok
         return 1;
 }
 
-int sb(char *l_b[], int opt) //test ok
+int sb(char *l_b[], int opt)
 {
     char *tmp;
 
@@ -42,7 +40,7 @@ int sb(char *l_b[], int opt) //test ok
         return 1;
 }
 
-int sc(char *l_a[], char *l_b[]) //test ok
+int sc(char *l_a[], char *l_b[])
 {
     sa(l_a, 1);
     sb(l_b, 1);

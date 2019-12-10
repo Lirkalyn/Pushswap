@@ -15,7 +15,7 @@ int list_lenght(char **list)
     return i;
 }
 
-int rra(char **l_a, int opt) //test ok
+int rra(char **l_a, int opt)
 {
     int i;
     int len;
@@ -32,7 +32,7 @@ int rra(char **l_a, int opt) //test ok
         my_putstr("rra ");
 }
 
-int rrb(char **l_b, int opt) //test ok
+int rrb(char **l_b, int opt)
 {
     int i;
     int len;
@@ -49,7 +49,7 @@ int rrb(char **l_b, int opt) //test ok
         my_putstr("rrb ");
 }
 
-int rrr(char **l_a, char **l_b) //test ok
+int rrr(char **l_a, char **l_b)
 {
     rra(l_a, 1);
     rrb(l_b, 1);

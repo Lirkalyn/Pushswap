@@ -8,15 +8,7 @@
 #include <stdlib.h>
 #include "my.h"
 
-/*static int list_lenght(char **list) //?
-{
-    int i;
-
-    for (i = 0; list[i] != 0; i++);
-    return i;
-}*/
-
-int pa(char **l_b, char **l_a) //test ok
+int pa(char **l_b, char **l_a)
 {
     int i;
     int len;
@@ -41,7 +33,7 @@ int pa(char **l_b, char **l_a) //test ok
     return 0;
 }
 
-int pb(char **l_a, char **l_b) //test ok
+int pb(char **l_a, char **l_b)
 {
     int i;
     int len;

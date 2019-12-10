@@ -7,7 +7,7 @@
 
 #include "my.h"
 
-int ra(char **l_a, int opt) //test ok
+int ra(char **l_a, int opt)
 {
     int i;
     char *tmp;
@@ -20,7 +20,7 @@ int ra(char **l_a, int opt) //test ok
         my_putstr("ra ");
 }
 
-int rb(char **l_b, int opt) //test ok
+int rb(char **l_b, int opt)
 {
     int i;
     char *tmp;
@@ -33,7 +33,7 @@ int rb(char **l_b, int opt) //test ok
         my_putstr("rb ");
 }
 
-int rr(char **l_a, char **l_b) //test ok
+int rr(char **l_a, char **l_b)
 {
     ra(l_a, 1);
     rb(l_b, 1);

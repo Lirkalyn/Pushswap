@@ -20,8 +20,7 @@ void sort_start(int argc, char **l_a, char **l_b)
         ok = 0;
         for (i = 0; i < (argc - 1); i++)
             if (l_a[i][0] == '-') {
-                ok = 1;
-                moover(argc, l_a, l_b, big_neg_finder(argc, l_a, l_b, i));
+                ok = moover(argc, l_a, l_b, big_neg_finder(argc, l_a, l_b, i));
             }
         neg_find = (ok == 1) ? 0 : 1;
     }
@@ -29,8 +28,7 @@ void sort_start(int argc, char **l_a, char **l_b)
         ok = 0;
         for (i = 0; i < (argc - 1); i++)
             if (l_a[i][0] == '0') {
-                ok = 1;
-                moover(argc, l_a, l_b, big_posi_finder(argc, l_a, l_b, i));
+                ok = moover(argc, l_a, l_b, big_posi_finder(argc, l_a, l_b, i));
             }
         neg_find = (ok == 1) ? 1 : 2;
     }
@@ -93,8 +91,7 @@ int main(int argc, char **argv)
         pa(l_b, l_a);
         rr(l_a, l_b);
     }
-    while (i-- >= 0)
-        rrb(l_b, 0);
+    for (;i-- >= 0; rrb(l_b, 0));
     while (l_b[0][0] == '0') {
         pa(l_b, l_a);
         ra(l_a, 0);
