@@ -47,6 +47,8 @@ int rrb(char **l_b, int opt)
             l_b[0] = tmp;
     if (opt == 0)
         my_putstr("rrb ");
+    else if (opt == 2)
+        my_putstr("rrb\n");
 }
 
 int rrr(char **l_a, char **l_b)
