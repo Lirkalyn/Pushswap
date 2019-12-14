@@ -91,15 +91,10 @@ int main(int argc, char **argv)
     if ((argc <= 2) || (check == (argc - 2)))
         return 0;
     sort_start(argc, l_a, l_b);
-    for (i = 0; l_b[0][0] == '-'; i++, pa(l_b, l_a), rr(l_a, l_b));
-    for (;i-- >= 0; rrb(l_b, 0));
+    for (i = 0; l_b[0][0] == '-'; i++, pa(l_b, l_a), ra(l_a, 0), rb(l_b, 1));
+    (i >= 0) ? my_putstr("rrb ") : 0;
+    for (;i-- >= 0; rrb(l_b, 1));
     for (; l_b[0][0] == '0'; pa(l_b, l_a), ra(l_a, 0), rrb(l_b, 0));
     rrb(l_b, 2);
-//    printf("\n");
-//    for (i = 0; i < (argc - 1); i++)
-//        printf("%s\n", l_a[i]);
-    //printf("\n");
-    //for (i = 0; i < (argc - 1); i++)
-    //    printf("%s\n", l_b[i]);
     return 0;
 }
