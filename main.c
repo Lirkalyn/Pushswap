@@ -95,5 +95,11 @@ int main(int argc, char **argv)
     for (;i-- >= 0; rrb(l_b, 0));
     for (; l_b[0][0] == '0'; pa(l_b, l_a), ra(l_a, 0), rrb(l_b, 0));
     rrb(l_b, 2);
+//    printf("\n");
+//    for (i = 0; i < (argc - 1); i++)
+//        printf("%s\n", l_a[i]);
+    //printf("\n");
+    //for (i = 0; i < (argc - 1); i++)
+    //    printf("%s\n", l_b[i]);
     return 0;
 }

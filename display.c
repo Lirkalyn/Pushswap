@@ -20,3 +20,15 @@ int my_putstr(char const *str)
         my_putchar(str[i]);
     return (0);
 }
+
+void fake_moover(int argc, int pos)
+{
+    int i;
+
+    if (pos >= (argc / 2))
+        for (i = pos; i < argc; i++)
+            my_putstr("rra ");
+    else if (pos <= (argc / 2))
+        for (i = 0; i < pos; i++)
+            my_putstr("ra ");
+}
