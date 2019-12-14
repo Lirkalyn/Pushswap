@@ -7,6 +7,30 @@
 
 #include "my.h"
 
+int n_checker(char *origin, char *replace)
+{
+    int ori = 0;
+    int rep = 0;
+    int lenght;
+    int i;
+
+    for (lenght = 0; origin[lenght] != '\0'; lenght++);
+    for (i = 1; i < lenght; i++) {
+        ori *= 10;
+        rep *= 10;
+        ori += (origin[i] - '0');
+        rep += (replace[i] - '0');
+    }
+    if (origin[0] == '-')
+        ori *= (-1);
+    if (replace[0] == '-')
+        rep *= (-1);
+    if (ori < rep)
+        return 1;
+    else
+        return 0;
+}
+
 int checker(char *origin, char *replace)
 {
     int ori = 0;

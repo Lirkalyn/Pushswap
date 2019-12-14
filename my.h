@@ -25,5 +25,6 @@ int rrr(char **l_a, char **l_b);
 int big_neg_finder(int argc, char **l_a, char **l_b, int pos);
 int big_posi_finder(int argc, char **l_a, char **l_b, int pos);
 int moover(int argc, char **l_a, char **l_b, int pos);
+int n_checker(char *origin, char *replace);
 
 #endif
