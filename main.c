@@ -95,4 +95,5 @@ int main(int argc, char **argv)
     for (;i-- >= 0; rrb(l_b, 0));
     for (; l_b[0][0] == '0'; pa(l_b, l_a), ra(l_a, 0), rrb(l_b, 0));
     rrb(l_b, 2);
+    return 0;
 }
