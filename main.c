@@ -89,7 +89,7 @@ int main(int argc, char **argv)
     put_in_place(argc, argv, l_a, l_b);
     for (i = 0; i < (argc - 2); check += n_checker(l_a[i], l_a[(i + 1)]), i++);
     if ((argc <= 2) || (check == (argc - 2)))
-        return 0;
+        return more(check, argc);
     sort_start(argc, l_a, l_b);
     for (i = 0; l_b[0][0] == '-'; i++, pa(l_b, l_a), ra(l_a, 0), rb(l_b, 1));
     (i >= 0) ? my_putstr("rrb ") : 0;

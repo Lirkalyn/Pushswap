@@ -32,3 +32,10 @@ void fake_moover(int argc, int pos)
         for (i = 0; i < pos; i++)
             my_putstr("ra ");
 }
+
+int more(int check, int argc)
+{
+    if (check == (argc - 2))
+        my_putstr("\n");
+    return 0;
+}

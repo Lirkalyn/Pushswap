@@ -27,5 +27,6 @@ int *big_posi_finder(int argc, char **l_a, char **l_b, int pos);
 int moover(int argc, char **l_a, char **l_b, int *pos);
 int n_checker(char *origin, char *replace);
 void fake_moover(int argc, int pos);
+int more(int check, int argc);
 
 #endif
